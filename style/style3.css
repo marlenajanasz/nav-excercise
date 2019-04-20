@@ -1,0 +1,165 @@
+*, *::before, *::after {
+
+  box-sizing: border-box;
+}
+body{
+	background-color: rgb(0,0,0);
+	color: white;
+}
+
+h1{
+	
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 60px;
+	margin-top: 60px;
+	
+	border: 2px black solid;
+	
+	text-align: center;
+	font-weight: bold;
+	font-size: 3em;
+	font-family: 'Lobster', cursive;
+	color: thistle;
+}
+nav{
+	width: 100%;
+	height: 60px;
+
+	background-image: url(../pictures/texture.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	
+	text-align: center;
+	
+	position: relative;
+	position: sticky;
+	z-index: 100;
+	
+	font-family: 'Sansita', sans-serif;
+	text-shadow: 2px 2px #000000;
+	
+}
+ul{
+	list-style-type: none;
+	width: 90%;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	padding-top: 15px;
+}
+ul > li{
+	float: left;
+	width: 18%;
+	z-index: 100;
+	font-size: 1.3em;
+	line-height: 120%;
+}
+.main > li:before{                   /*czemu .main > li: after {content="]"} dodaje dodatką belkę menu ze znakiem ] ?*/
+	content: "\2248";
+    position: relative;
+    left: -45px;
+}    
+ul li:hover{
+	background-color: #551555;
+	cursor: pointer;
+}
+ul li:hover ul{
+	display: inline-block;
+}
+ul > li:hover > ul > a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+ul > li:hover > ul > a > li{
+	border-bottom: 1px dashed #000000;
+	line-height: 40px;
+}
+ul li:hover ul a li:first-child{
+	border-top: 1px dashed #000000;
+}
+ul > li > ul {
+	display: none;
+	width: 100%;
+	margin-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+ul > li > ul > a:hover > li{
+	background-color: #330333;
+}
+a[href="http://nonsensopedia.wikia.com/wiki/Le%C5%9Bny_Dzban"] li{
+	color: #DDDDDD;
+}
+a[href="http://nonsensopedia.wikia.com/wiki/Mamrot"] li{
+	color: #DAA520;
+}
+a[href="http://www.winka.net/wino/bycza-krew-100.html"] li{
+	color: #DDDDDD;
+}
+li.color{
+	color: #DDDDDD;
+}
+li.color1{
+	color: #DAA520;
+}
+
+#alko{
+	position: absolute;
+	top: 48%;
+	left: 28%;
+}
+.first~li{
+	color: wheat;
+}
+
+
+@media all and (min-width: 1015px) and (max-width: 1780px){
+	#alko{
+	top: 58%;
+	left: 22%;
+}
+}
+@media all and (min-width: 480px) and (max-width: 1014px){
+	h1{
+		font-size: 2em;
+	}
+	nav{
+		height: 50px;
+	}
+	ul.main{
+		margin-left: -5px;
+	}
+	ul > li{
+		font-size: 0.9em;
+		width: 20%;
+	}
+	ul > li:nth-child(2){
+		margin-left: -10px;
+	}
+	.main > li:before{ 
+		left: -5px;
+	}
+	ul > li:hover > ul > a > li{
+		font-size: 1em;
+		line-height: 25px;
+	}
+	#alko{
+		left: 5%;
+	}
+	.extra{
+		display: none;
+	}
+}
+@media all and (min-width: 640px){
+	.extra.one{
+		display: inline-block;
+	}
+}
+@media all and (min-width: 855px){
+	.extra.two{
+		display: inline-block;
+	}
+}
